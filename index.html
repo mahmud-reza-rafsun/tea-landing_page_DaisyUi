@@ -12,15 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d">
+    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
     <!-- tailwind custom cofig color -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                'clifford': '#da373d',
-                'primary-btn': '#da373d',
+                'gradient-start': '#FF8938',
+                'gradient-end': '#F00',
               }
             }
           }
@@ -28,15 +29,15 @@
       </script>
 </head>
 <body>
-    <header class="container mx-auto">
+    <header class="container mx-auto pl-6 pr-6">
         <!-- banner section -->
-        <div class="hero ">
-            <div class="hero-content flex-col lg:flex-row">
+        <div class="">
+            <div class="flex justify-between flex-col lg:flex-row">
               <div class="">
                 <h1 class="text-4xl lg:text-7xl font-bold">It's good <br>
                     tea time at The <br> Tea House</h1>
                 <p class="py-6">Tea and Botanical Solutions Supplier Give Optimum <br> Satisfaction To Your Taste Buds.</p>
-                <button class="btn btn-primary">Explore More</button>
+                <button class="btn text-white bg-red-500">Explore More <i class="fa-regular fa-arrow-up-right"></i></button>
               </div>
               <div class="">
                 <img src="images/banner.png" class="lg:max-w-md sm:min-w-2" />
@@ -52,7 +53,7 @@
             </div>
           </div>
     </header>
-    <main class="container mx-auto pl-9 pr-9">
+    <main class="container mx-auto pl-6 pr-6">
       <!-- Featured section -->
       <section class="text-center my-24">
         <h2 class="text-3xl lg:text-5xl font-extrabold mb-5">Our Featured Products</h2>
@@ -96,7 +97,7 @@
       <!-- freash tea section -->
       <section class="my-24 gap-12 flex flex-col lg:flex-row">
         <div class="grid gap-8 grid-cols-1 md: grid-cols-2 flex-1">
-          <div class="rounded-xl h-36 bg-gradient-to-r from-red-100 to-red-100"></div>
+          <div class="rounded-xl h-36 bg-gradient-to-r from-gradinet-start to-gradinet-end"></div>
           <div class="row-span-2 bg-[#E6A6231A] rounded-lg px-8 py-12 flex justify-center items-center">
             <img src="images/fresh-1.png" alt="">
           </div>
@@ -115,27 +116,101 @@
         </div>
       </section>
       <!-- super client section -->
-      <section class="my-24 flex flex-col lg:flex-row gap-12 rounded-md bg-gradient-to-r from-[#FF8938] to-[#F00] px-16 py-24">
-        <div class="space-y-5">
-          <h2 class="text-5xl font-semibold text-white">
-            Meet Our Super <br> Clients
-          </h2>
-          <p class="text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-          <button class="btn btn-primary">Show All</button>
+      <section class="my-24 flex flex-col lg:flex-row gap-12 rounded-md bg-gradient-to-r from-[#FF8938] to-[#F00] lg:px-16 lg:py-20 sm:py-14 sm:px-14">
+        <div class="flex lg:pr-28 items-center">
+          <div class="space-y-5 p-7">
+            <h2 class="text-3xl lg:text-5xl font-semibold text-white">
+              Meet Our Super <br> Clients
+            </h2>
+            <p class="text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            <button class="btn text-red-500 bg-white ">Show All</button>
+          </div>
         </div>
-        <div class="">
-          <!-- review -->
-          <div class="relative p-10 rounded-lg bg-white">
-            <img class="absolute -left-5 -top-5" src="images/client.png" alt="">
+        <!-- review container -->
+        <div class="relative">
+          <!-- next review -->
+          <div class="relative mb-16 z-10 opacity-40 p-10 rounded-lg bg-white">
+            <img class="absolute -left-5 -top-5 border-4 border-white rounded-full bg-white" src="images/client.png" alt="">
             <p>We are providing the best and suitable home insurance services for the people who are interested to treatment</p>
             <h4 class="font-bold mt-5">Ilham Yuda</h4>
             <p class="font-medium">Businessman</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="">
+            </div>
+          </div>
+          <!-- current review -->
+          <div class="absolute p-10 z-20 top-40 lg:-left-36 lg:w-[430px] rounded-lg bg-white">
+            <img class="absolute -left-5 -top-5 border-4 border-white rounded-full bg-white" src="images/client.png" alt="">
+            <p>We are providing the best and suitable home insurance services for the people who are interested to treatment</p>
+            <h4 class="font-bold mt-5">Ilham Yuda</h4>
+            <p class="font-medium">Businessman</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="">
+            </div>
+          </div>
+          <!--previous review -->
+          <div class="relative opacity-40 z-10 p-10 rounded-lg bg-white">
+            <img class="absolute -left-5 -top-5 border-4 border-white rounded-full bg-white" src="images/client.png" alt="">
+            <p>We are providing the best and suitable home insurance services for the people who are interested to treatment</p>
+            <h4 class="font-bold mt-5">Ilham Yuda</h4>
+            <p class="font-medium">Businessman</p>
+            <div class="flex justify-end">
+              <img src="images/circles.png" alt="">
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-
+    <!-- footer section -->
+    <footer class="px-10 py-10 bg-base-200 text-base-content">
+      <div class="container mx-auto pl-6 pr-6">
+        <div class="flex justify-between my-24">
+          <img src="images/cup.png" alt="">
+          <p>
+            <span>Ready to get strated?</span>
+            <button class="btn text-white bg-red-500">Get Started</button>
+          </p>
+        </div>
+        <div class="footer">
+          <nav>
+            <header class="footer-title">Services</header> 
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </nav> 
+          <nav>
+            <header class="footer-title">Company</header> 
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav> 
+          <nav>
+            <header class="footer-title">Legal</header> 
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </nav> 
+          <form>
+            <header class="footer-title">Newsletter</header> 
+            <fieldset class="form-control w-80">
+              <label class="label">
+                <span class="label-text">Enter your email address</span>
+              </label> 
+              <div class="join">
+                <input type="text" placeholder="username@site.com" class="mr-4 bg-transparent border-b-2 border-black outline-none" /> 
+                <button class="btn text-white bg-red-500 rounded-full">
+                  <i class="fa-regular fa-arrow-right"></i>
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="mt-10 text-center">
+          <p>Copyright © 2024 - All right reserved by Tea House Ltd.</p>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
